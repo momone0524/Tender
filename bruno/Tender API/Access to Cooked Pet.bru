@@ -1,0 +1,25 @@
+meta {
+  name: Access to Cooked Pet
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/pets/1/logs
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "habitId": 1,
+    "date": "2026-02-18",
+    "note": "Did my daily stretch!"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

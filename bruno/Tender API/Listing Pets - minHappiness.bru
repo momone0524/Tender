@@ -1,0 +1,20 @@
+meta {
+  name: Listing Pets - minHappiness
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/pets?minHapiness=50
+  body: json
+  auth: inherit
+}
+
+params:query {
+  minHapiness: 50
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

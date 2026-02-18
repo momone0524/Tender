@@ -1,0 +1,24 @@
+meta {
+  name: Create Pet - Invalid
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/pets
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "",
+    "species": "dinosaur"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

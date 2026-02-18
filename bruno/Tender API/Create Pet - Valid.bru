@@ -1,0 +1,23 @@
+meta {
+  name: Create Pet - Valid
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/pets
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Choco",
+    "species": "blob"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

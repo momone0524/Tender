@@ -1,0 +1,26 @@
+meta {
+  name: Create Habit - Valid
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/pets/1/habits
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Daily Stretch",
+    "category": "fitness",
+    "targetFrequency": 7,
+    "statBoost": "energy"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

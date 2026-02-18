@@ -1,0 +1,21 @@
+meta {
+  name: Listing Pets - combined
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/pets?species=blob&minHapiness=50
+  body: none
+  auth: inherit
+}
+
+params:query {
+  species: blob
+  minHapiness: 50
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
