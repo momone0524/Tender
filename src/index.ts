@@ -1,9 +1,9 @@
 import 'dotenv/config';
 import express from 'express';
 
-import { createPet, listPets, getPet, updatePet, deletePet } from './controllers/pets.js';
 import { createHabit, listHabits } from './controllers/habits.js';
 import { createLog } from './controllers/logs.js';
+import { createPet, deletePet, getPet, listPets, updatePet } from './controllers/pets.js';
 
 const app = express();
 app.use(express.json());
@@ -22,8 +22,8 @@ app.get('/pets/:petId/habits', listHabits);
 // routes - logs
 app.post('/pets/:petId/logs', createLog);
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Tender listening on http://localhost:${PORT}`);
 });
